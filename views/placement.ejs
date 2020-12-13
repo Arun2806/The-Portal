@@ -1,0 +1,95 @@
+<%-include("partials/header")-%>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+</a>
+<div class ="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700" >DETAILS</a>
+  </div>
+<a class="head" style=" text-align:center;" >PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+
+<form action="/placement" method="post">
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="form-box">
+      <div class="form-group">
+        <label for="mail">Email address</label>
+        <input type="email" class="form-control" id="mail" name="smail" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="dept">Department</label>
+        <input type="text" name="dept" class="form-control" id="dept" list="cars" required autocomplete="off">
+        <small id="dep" class="form-text text-muted">Enter your Department</small>
+        <datalist id="cars">
+          <option>B.E COMPUTER SCIENCE ENGINEERING </option>
+          <option>B.E ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+          <option>B.E ELECTRICAL AND COMMUNICATION ENGINEERING</option>
+          <option>B.E AUTOMOBILE ENGINEERING</option>
+          <option>B.E MECHANICAL ENGINEERING</option>
+          <option>B.E BIOMEDICAL ENGINEERING</option>
+          <option>B.E INSTRUMENTATION</option>
+        </datalist>
+      </div>
+      <div class="form-group">
+        <label for="cgpa">CGPA</label>
+        <input type="number" step="0.01" min="5" max="10" name="cgpa" class="form-control" id="cgpa" required>
+        <small class="form-text text-muted">Enter your CGPA</small>
+      </div>
+      <div class="form-group">
+        <label for="roll">Roll-Number</label>
+        <input type="text" name="rollno"  class="form-control" id="roll" required>
+        <small class="form-text text-muted">Enter your Registration Number</small>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="form-box">
+      <div class="form-group">
+        <label for="">Availabe Companies</label>
+        <table>
+          <tr>
+            <td><label class="container">Google
+            <input type="checkbox" name="c1" id="c1">
+            <span class="checkmark"></span>
+          </label></td>
+            <td><label class="container">Microsoft
+              <input type="checkbox" name="c2" id="c2">
+              <span class="checkmark"></span>
+            </label>
+        </td>
+          </tr>
+          <tr>
+            <td><label class="container">Arcesium
+              <input type="checkbox" name="c3" id="c3">
+              <span class="checkmark"></span>
+            </label></td>
+            <td><label class="container">Infosys
+              <input type="checkbox" name="c4" id="c4">
+              <span class="checkmark"></span>
+            </label></td>
+          </tr>
+          <tr>
+            <td><label class="container">TCS
+              <input type="checkbox" name="c5" id="c5">
+              <span class="checkmark"></span>
+            </label></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="form-group">
+        <label for="post">Address</label>
+        <textarea name="post" id="post" class="form-control" rows="6" cols="40" required></textarea>
+        <small class="form-text text-muted">Enter your Address</small>
+      </div>
+      <button type="submit" class="btn btn-lg btn-outline-dark" onclick="cmpcheck()">Submit</button>
+    </div>
+  </div>
+</div>
+</form>
+
+<%-include("partials/footer")-%>

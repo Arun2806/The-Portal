@@ -1,0 +1,46 @@
+<%-include("partials/header") -%>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+</a>
+<div class ="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700" >LOGIN</a>
+  </div>
+<a class="head" style=" text-align:center;" >PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+
+
+<div class="row">
+  <div class="col-6 intro">
+   <p style="color:white;padding-top:460px;font-family: 'Orbitron', sans-serif;font-weight:700px;font-size:22px">WELCOME TO THE PORTAL</p>
+  </div>
+  <div class="col-6">
+    <div class="form-box">
+      <form action="/index" method="post">
+        <div class="form-group">
+          <label for="username">User-Name</label>
+          <input type="text" name="username"  class="form-control" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="org-pass">Password</label>
+          <input type="password" name="pass" class="form-control" id="org-pass"  required>
+        </div>
+        <div class="form-group">
+          <label for="pass-check">Confirm Password</label>
+          <input type="password" name="confirmpass" class="form-control" id="pass-check" required>
+          <small id="pass-seq" class="form-text text-muted">We'll never share your password with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="phno">Phone-Number</label>
+          <input type="text" name="phno" class="form-control" id="phno" required maxlength="10">
+        </div>
+        <button type="submit" class="btn btn-lg btn-outline-dark"  onclick="valid()">Submit</button>
+      </form>
+      <h4 id="foot" style="margin-top:60px;font-size:20px;font-family:Montserrat;font-weight:400">To check your Results,Click-><a id="foot" href="/disp">Here</a></h4>
+
+    </div>
+  </div>
+</div>
+
+
+<%-include("partials/footer")-%>

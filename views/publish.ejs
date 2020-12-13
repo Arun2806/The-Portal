@@ -1,0 +1,64 @@
+<%-include("partials/header")-%>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+  </a>
+  <div class="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700">RESULTS</a>
+  </div>
+  <a class="head" style=" text-align:center;">PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+<table class="table table-dark">
+
+
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">COMPANY NAME</th>
+      <th scope="col">STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+      <%  for(var i=0;i<nam.length;i++){ %>
+     <tr>
+
+
+     <th scope="row"><%=i+1%></th>
+      <% if(cid[i].companyid =='16Z200'){ %>
+      <td>Google</td>
+      <% } %>
+      <% if(cid[i].companyid =='16Z300'){ %>
+      <td>Microsoft</td>
+      <% } %>
+      <% if(cid[i].companyid =='16Z400'){ %>
+      <td>Arcesium</td>
+      <% } %>
+      <% if(cid[i].companyid =='16Z500'){ %>
+      <td>Infosys</td>
+      <% } %>
+      <% if(cid[i].companyid =='16Z600'){ %>
+      <td>TCS</td>
+      <% } %>
+      <%       if(stat[i].status=="Wait" || stat[i].status=="W" ){ %>
+      <td>Wait</td>
+      <%                                                }   %>
+
+      <%       if(stat[i].status=="Selected" || stat[i].status=="S"){                   %>
+      <td>Selected</td>
+      <%                                                }   %>
+
+      <%       if(stat[i].status=="Rejected" || stat[i].status=="R"){                   %>
+      <td>Rejected</td>
+      <%                                                }   %>
+
+
+    </tr>
+    <% }   %>
+  </tbody>
+</table>
+
+
+<%-include("partials/footer")-%>

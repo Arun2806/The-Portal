@@ -1,0 +1,59 @@
+<%- include("partials/header") -%>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+</a>
+<div class ="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700" >CHECK-LIST</a>
+  </div>
+<a class="head" style=" text-align:center;" >PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+<br>
+<div class="row">
+  <div class="col-lg-3">
+  <h4>Name</h4>
+  </div>
+  <div class="col-lg-3">
+<h4>CGPA</h4>
+  </div>
+  <div class="col-lg-3">
+<h4>Roll Number</h4>
+  </div>
+  <div class="col-lg-3">
+<h4>Status</h4>
+  </div>
+</div>
+<form action="/result" method="post">
+<%  if(students.length==0){   %>
+        <h1>No Records Available</h1>
+<%  }else{      %>
+    <%   for(var i=0;i<students.length;i++){  %>
+    <div class="row">
+      <div class="col-lg-3">
+    <p><%=students[i].username%></p>
+      </div>
+      <div class="col-lg-3">
+    <p><%=students[i].CGPA%></p>
+      </div>
+      <div class="col-lg-3">
+    <p><%=students[i].rollno%></p>
+      </div>
+      <div class="col-lg-3">
+        <input type="text" name="sta"  id="status" list="ID" required autocomplete="off" value="Wait">
+        <datalist id="ID">
+          <option>Wait</option>
+          <option>Selected</option>
+          <option>Rejected</option>
+        </datalist>
+      </div>
+    </div>
+    <% }  %>
+    <br>
+    <button type="submit" class="btn btn-lg btn-outline-dark mt-auto " style="align-self:center;margin-left:700px;">Save&Exit</button>
+<%  }  %>
+
+
+</form>
+
+<%- include("partials/footer") -%>

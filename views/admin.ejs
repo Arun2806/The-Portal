@@ -1,0 +1,48 @@
+<%-include("partials/header")-%>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+</a>
+<div class ="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700" >ADMIN LOGIN</a>
+  </div>
+<a class="head" style=" text-align:center;" >PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+<div class="row">
+  <div class="col-lg-6 intro">
+<p style="color:white;padding-top:460px;font-family: 'Orbitron', sans-serif;font-weight:700px;font-size:22px">WELCOME TO THE PORTAL</p>
+  </div>
+  <div class="col-lg-6">
+    <form  action="/admin" method="post">
+      <div class="form-box">
+        <div class="form-group">
+          <label for="cname">Company-Name</label>
+          <input type="text" name="cname" class="form-control" id="cname" list="ID" required autocomplete="off">
+          <small id="cname" class="form-text text-muted">Select your company Name</small>
+          <datalist id="ID">
+            <option>Google</option>
+            <option>Microsoft</option>
+            <option>Arcesium</option>
+            <option>Infosys</option>
+            <option>TCS</option>
+          </datalist>
+        </div>
+        <div class="form-group">
+      <label for="companyID">Company ID</label>
+      <input type="text" name="companyID" class="form-control" id="companyID" required>
+      <small id="companyID" class="form-text text-muted">Enter your Company-ID</small>
+    </div>
+    <div class="form-group">
+  <label for="cmppass">ADMIN-PASSWORD</label>
+  <input type="password" name="cmppass" class="form-control" id="cmppass" required>
+  <small id="cmppass" class="form-text text-muted">Enter your Login Password</small>
+  </div>
+  <button type="submit" class="btn btn-lg btn-outline-dark" onclick="admincheck()">Submit</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+<%-include("partials/footer")-%>

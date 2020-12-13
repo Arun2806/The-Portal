@@ -1,0 +1,41 @@
+<%-include("partials/header")-%>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" width="auto" height=" 40" class="d-inline-block align-top" alt="">
+</a>
+<div class ="htext" style="text-align:center">
+    <a class="head" style=" text-align:center;font-size:30px;font-family:Montserrat;font-weight:700" >STUDENT-LOGIN</a>
+  </div>
+<a class="head" style=" text-align:center;" >PLACEMENT INFORMATION SYSTEM</a>
+</nav>
+<div class="row">
+  <div class="col-lg-6 intro">
+<p style="color:white;padding-top:460px;font-family: 'Orbitron', sans-serif;font-weight:700px;font-size:22px">WELCOME TO THE PORTAL</p>
+  </div>
+  <div class="col-lg-6">
+    <div class="form-box">
+      <form action="/disp" method="post">
+        <div class="form-group">
+          <label for="username">User-Name</label>
+          <input type="text" name="username"  class="form-control" id="username" required>
+          <small class="form-text text-muted">Enter your User Name</small>
+        </div>
+        <div class="form-group">
+          <label for="roll">Roll-Number</label>
+          <input type="text" name="rollno"  class="form-control" id="roll" required>
+          <small class="form-text text-muted">Enter your Registration Number</small>
+        </div>
+        <div class="form-group">
+          <label for="org-pass">Password</label>
+          <input type="password" name="pass" class="form-control" id="org-pass" required>
+          <small class="form-text text-muted">Enter your Password to check Result</small>
+        </div>
+<button type="submit" class="btn btn-lg btn-outline-dark mt-auto">Submit</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+<%-include("partials/footer")-%>
